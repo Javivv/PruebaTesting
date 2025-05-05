@@ -20,7 +20,7 @@ jobs:
     - name: Run Playwright tests
 
       # Se indica aquí, va a parar en el primer fallo
-      run: npx playwright test --exit-on-fail
+      run: npx playwright test --max-failures=1
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
